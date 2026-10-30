@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "release-note-forge"
+version = "1.0.0"
+description = "Dependency-free CLI for generating structured release notes from Git history."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+keywords = ["git", "release-notes", "changelog", "conventional-commits", "github", "cli"]
+
+[project.scripts]
+release-note-forge = "release_note_forge.cli:main"
+rnf = "release_note_forge.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/bafnayeygian/ReleaseNoteForge"
+Issues = "https://github.com/bafnayeygian/ReleaseNoteForge/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
